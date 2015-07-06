@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using System.Reflection;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace XuzzleRand
 {
@@ -314,11 +315,13 @@ namespace XuzzleRand
 
 				// Read the random line.
 				text = lines.Skip(randomNumber - 1).Take(1).First().ToUpper().Trim();
+				text = Regex.Replace (text, @"\s+", "");
 
 				while (text.Length < 15) {
 					randomNumber = random.Next(0, lines.Length);
 
 					string text2 = lines.Skip(randomNumber - 1).Take(1).First().ToUpper().Trim();
+					text2 = Regex.Replace (text2, @"\s+", "");
 					text = string.Concat(text, text2);
 				}
 

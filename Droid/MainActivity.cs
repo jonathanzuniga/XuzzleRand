@@ -24,6 +24,9 @@ namespace XuzzleRand.Droid
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 
 			LoadApplication (new App ());
+
+			Window.AddFlags(WindowManagerFlags.Fullscreen);
+			Window.ClearFlags(WindowManagerFlags.ForceNotFullscreen);
 		}
 	}
 }
