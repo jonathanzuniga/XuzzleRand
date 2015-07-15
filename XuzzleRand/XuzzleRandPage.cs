@@ -259,8 +259,8 @@ namespace XuzzleRand
 				await ShiftIntoEmpty (rand.Next (NUM), emptyCol, 25);
 				await ShiftIntoEmpty (emptyRow, rand.Next (NUM), 25);
 			}
-			newGameButton.IsEnabled = true;
 			button.IsEnabled = true;
+			newGameButton.IsEnabled = true;
 
 			isBusy = false;
 
@@ -283,6 +283,7 @@ namespace XuzzleRand
 		async Task DoWinAnimation ()
 		{
 			// Inhibit all input.
+			newGameButton.IsEnabled = false;
 			randomizeButton.IsEnabled = false;
 			isBusy = true;
 
@@ -296,6 +297,7 @@ namespace XuzzleRand
 			}
 
 			// All input.
+			newGameButton.IsEnabled = true;
 			randomizeButton.IsEnabled = true;
 			isBusy = false;
 		}
