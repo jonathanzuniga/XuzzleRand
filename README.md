@@ -4,6 +4,8 @@ XuzzleRand
 This app is a modified version of the example of Xamarin called Xuzzle.
 https://github.com/xamarin/xamarin-forms-samples/tree/master/Xuzzle
 
+[![Demo](https://img.youtube.com/vi/KCrKtxsBuWA/0.jpg)](https://www.youtube.com/watch?v=KCrKtxsBuWA)
+
 It was tested only on Android.
 
 Differences
